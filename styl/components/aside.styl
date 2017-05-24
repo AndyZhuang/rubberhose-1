@@ -1,0 +1,65 @@
+aside
+  width: 50px
+  height: calc(100% - 30px)
+  position: absolute
+  top: 0
+  right: auto
+  bottom: 30px
+  left: 0
+  background-color: #F4F4F4
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: flex-end
+  z-index: 13
+  a.cta
+    width: 100%
+    height: 50px
+    background-size: 70% 70%
+    background-position: center center
+    background-repeat: no-repeat
+    transition: 0.35s
+    transition-delay: 0.35s
+    &:hover, &.hover
+      background-color: white
+      cursor: pointer
+      transition: 0.35s
+    &#ctaInformation
+      &:hover, &.hover
+        background-image: url(../images/icons/information_graay.svg)
+
+html[theme="blue"]
+  aside
+    a.cta
+      &#ctaInformation
+        background-image: url(../images/icons/information_blue.svg)
+html[theme="red"]
+  aside
+    a.cta
+      &#ctaInformation
+        background-image: url(../images/icons/information_red.svg)
+
+#divInformation
+  width: auto
+  height: 50px
+  padding: 0 10px
+  position: absolute
+  bottom: 30px
+  left: 50px
+  background: white
+  opacity: 0
+  pointer-events: none
+  transition: 0.35s
+  transition-delay: 0.35s
+  z-index: 15
+  a
+    margin: 0 15px
+    font-size: 20px
+    line-height: 50px
+    pointer-events: none
+  &.active
+    opacity: 1
+    pointer-events: visible
+    transition: 0.35s
+    a
+      pointer-events: visible

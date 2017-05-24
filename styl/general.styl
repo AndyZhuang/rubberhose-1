@@ -1,0 +1,32 @@
+[hidden]
+  display: none
+  pointer-events: none
+a
+  cursor: pointer
+  text-decoration: none
+  transition: 0.35s
+  &:hover
+    transition: 0.35s
+
+html[theme="blue"]
+  a
+    color: rubberhose_blue
+    &:hover
+      color: rubberhose_blue-accent
+html[theme="red"]
+  a
+    color: rubberhose_red
+    &:hover
+      color: rubberhose_red-accent
+html[theme="yellow"]
+  a
+    color: rubberhose_yellow
+    &:hover
+      color: rubberhose_yellow-accent
+
+@font-face {
+  font-family: 'Menlo';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Menlo Regular'), url('/css/fonts/menlo.woff') format('woff');
+}

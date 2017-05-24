@@ -1,0 +1,26 @@
+footer
+  height: 30px
+  width: 100%
+  position: absolute
+  top: auto
+  bottom: 0
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  align-items: center
+  z-index: 15
+  span
+    margin: -2.5px 15px 0 0
+    color: white
+    opacity: 0.8
+    a
+      color: white !important
+  &:hover span
+    opacity: 1
+
+html[theme="blue"]
+  footer
+    background-color: rubberhose_blue
+html[theme="red"]
+  footer
+    background-color: rubberhose_red

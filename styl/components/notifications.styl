@@ -1,0 +1,43 @@
+.notification
+  height: 5vh
+  width: 400px
+  position: fixed
+  top: -510px
+  display: flex
+  flex-direction: center
+  align-items: center
+  border-radius: 8px
+  overflow: hidden
+  user-select: none
+  pointer-events: none
+  opacity: 0
+  transition: 0.35s ease-in-out
+  .icon
+    width: 150px
+    height: 100%
+    background-size: auto 60%
+    background-position: center center
+    background-repeat: no-repeat
+    .fail
+      background-image: url(../images/icons/fail.svg)
+    .success
+      background-image: url(../images/icons/success.svg)
+  p
+    width: 100%
+    margin: 0 0 -2px -150px
+    color: white
+    text-align: center
+    line-height: 1
+    user-select: none
+.notification.active
+  top: 10px
+  cursor: pointer
+  pointer-events: auto
+  opacity: 1
+  p
+    transition: 0.5s ease-in-out
+
+.notification#decryptSuccess-false
+  background: #C11432
+.notification#uploadSuccess-true
+  background: #66A64F
